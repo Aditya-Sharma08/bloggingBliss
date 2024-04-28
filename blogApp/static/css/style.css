@@ -1,0 +1,126 @@
+.mt20{
+margin-top:20px;
+}
+
+body {
+    /* background-color: cornflowerblue; */
+    font-family: "DM Sans", sans-serif!important;
+  /* font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; */
+}
+
+.container-custom{
+width:95%!important;
+margin:auto;
+}
+
+.bg-primary{
+    background: cornflowerblue!important;
+}
+/* styles.css */
+
+.custom-navbar {
+    background-color: cornflowerblue; /* Set background color */
+    padding: 20px;
+}
+
+.custom-navbar .brand-logo {
+    font-size: 30px; /* Adjust logo font size */
+    font-weight: bold; /* Make logo text bold */
+}
+
+.custom-navbar ul li a {
+    color: #fff; /* Set text color */
+    font-size: 18px; /* Set font size */
+}
+
+.custom-navbar ul li a:hover {
+    background-color: rgb(89, 137, 225); /* Set background color on hover */
+}
+
+
+.welcome-section {
+    background-color: cornflowerblue;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.welcome-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.owl-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 0; /* Adjust margin as needed */
+}
+
+.owl-nav button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff!important;
+    margin: 10px 10px; /* Adjust margin as needed */
+}
+
+
+.owl-nav button:focus {
+    outline: none;
+}
+
+.owl-carousel .owl-item .card {
+    border-radius: 10px;
+}
+
+.img-container {
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+.img-container img {
+    width: 100%; 
+    height: auto; 
+}
+
+.description {
+    color: rgb(240, 238, 238);
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.rec-posts {
+    font-weight: 400;
+    font-size: 60px;
+    text-align: left;
+    color: cornflowerblue;
+}
+
+.topic-posts-home {
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.footer-title {
+    margin-top: 0;
+}
+
+.about-title {
+    background-color: cornflowerblue;
+    padding-bottom: 10px 100% 20px 100%;
+}
+
+.about-content {
+    font-size: 20px;
+}
+

@@ -1,0 +1,52 @@
+{%extends 'base.html' %}
+
+{%block title%} Welcome to Blogging Bliss {%endblock%}
+
+{%block content%}
+
+<section class="welcome-section">
+    <div class="container">
+        <h1 class="welcome-heading" style="font-size: 55px;">Do you want to create your own blogs? Join us today.</h1>
+        <div class="description">
+            <p>Share your blogs on Blogging Bliss!</p>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col s12">
+            
+            <h1 class="rec-posts">Register Now!</h1>
+
+
+            <div class="row">
+
+                <div class="col s12 m7"> 
+
+                    <form method="post" style="font-size: 14px;">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn  bg-primary " type="submit">Create Superuser</button>
+                    </form>
+
+                </div>
+
+                <div class="col s12 m5">
+                    <img src="https://img.freepik.com/free-vector/app-development-concept-with-flat-deisng_23-2147852845.jpg?w=740&t=st=1714226076~exp=1714226676~hmac=1e04387d43ea4de6339690b3c442e913a6821b5fd7fd1b505409d0a7ecffc4ea" alt"img" class="responsive-img" style="border-radius: 10px; height: 100%; width:100%; object-fit: cover;">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+{% endblock %}

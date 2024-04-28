@@ -1,0 +1,101 @@
+{%extends 'base.html' %}
+
+{%block title%} Welcome to Blogging Bliss {%endblock%}
+
+{%block content%}
+
+<section class="welcome-section">
+    <div class="container">
+        <h1 class="welcome-heading">Welcome to the hub of inspiration and expression.</h1>
+        <div class="description">
+            <p>Here are some categories on our bliss.</p>
+        </div>
+    </div>
+</section>
+
+<div style="background-color: cornflowerblue;">
+
+<div class="container-custom owl-nav">
+
+
+    <!-- Set up your HTML -->
+    <div class="owl-carousel">
+
+
+        {% for cat in cats %}
+
+        <div class="card item" style="margin-left:2px;">
+
+            <div class="img-container">
+
+                <img src="/media/{{cat.image}}" class="responsive-img" style="max-height: 265px;object-fit:cover;" alt="">
+
+            </div>
+            <div class="card-content" style="text-align: center;">
+
+                <div class="card-title">
+                    {{cat.title}}
+                </div>
+
+                <p class="truncate">{{cat.description}}</p>
+                <div class="container center-align mt20">
+                    <a href="/category/{{cat.url}}" class="btn bg-primary">VIEW</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        {%endfor%}
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col s12 ">
+            
+            <h1 class="rec-posts">Recent Posts</h1>
+
+            {%for p in posts %}
+
+            <div class="row">
+
+                <div class="col s12 m8">
+
+                    <h2 class="topic-posts-home">{{p.title}}</h2>
+                    {{p.content |truncatewords:70 | safe}}
+                    <div class="mt20">
+                        <a href="/blog/{{p.url}}" class="btn  bg-primary ">Read More</a>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <img src="/media/{{p.image}}" class="responsive-img" style="border-radius: 10px;  margin-top:50px; max-height: 180px; width:100%; object-fit: cover;">
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+{%endblock%}

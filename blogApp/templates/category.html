@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome to Blogging Bliss {% endblock %}
+
+{% block content %}
+
+<section class="welcome-section">
+    <div class="container">
+        <h3 class="welcome-heading" style="font-weight: 100; font-size: 50px;">{{ cat.title }}</h3>
+    </div>
+</section>
+<div class="container">
+
+    <div class="row">
+
+        <div class="col s12 m4">
+            <img src="/media/{{cat.image}}" class="responsive-img" style="max-height:450px;width:100%;object-fit:cover; border-radius: 10px;">
+        </div>
+
+        <div class="col s12 m8">
+            <div class="description black-text">
+                <h5>{{cat.description}}</h5>
+                <p>Search blogs:</p>
+            </div>
+            <nav>
+                <div class="nav-wrapper">
+                    <form method="GET" action="{% url 'search_results' %}">
+                        <div class="input-field white">
+                          <i class="material-icons prefix">search</i>
+                          <input type="text" name="q" id="search" class="validate black-text" placeholder="Search for any post">
+                          <!-- <label for="search">Search</label> -->
+                        </div>
+                      </form>
+                    
+                </div>
+            </nav>
+        </div>
+
+    </div>
+    <div class="collection">
+
+        {% if query %}
+            
+            <h4>Search Results for "{{ query }}"</h4>
+            {% if posts %}
+                {% for p in posts %}
+                    <a href="/blog/{{ p.url }}" class="collection-item">{{ p.title }}</a>
+                {% endfor %}
+            {% else %}
+                <p>No results found for "{{ query }}".</p>
+            {% endif %}
+        {% else %}
+            {% for p in posts %}
+                <a href="/blog/{{ p.url }}" class="collection-item">{{ p.title }}</a>
+            {% empty %}
+                <h3>No posts in this category</h3>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}

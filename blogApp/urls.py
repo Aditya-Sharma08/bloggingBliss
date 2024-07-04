@@ -7,7 +7,7 @@ from .views import helloWorld, home, post, category, about, search_results, regi
 urlpatterns = [
     path('hello/', helloWorld),
     path('home/', home),
-    path('/', home),
+    path('', home),
     path('blog/<slug:url>', post),
     path('category/<slug:url>', category),
     path('about/', about),
